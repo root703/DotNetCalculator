@@ -1,0 +1,15 @@
+C:\Project\DotNetCalculator\Calculator\bin\Release\net8.0\Calculator.exe
+C:\Project\DotNetCalculator\Calculator\bin\Release\net8.0\Calculator.deps.json
+C:\Project\DotNetCalculator\Calculator\bin\Release\net8.0\Calculator.runtimeconfig.json
+C:\Project\DotNetCalculator\Calculator\bin\Release\net8.0\Calculator.dll
+C:\Project\DotNetCalculator\Calculator\bin\Release\net8.0\Calculator.pdb
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.AssemblyInfoInputs.cache
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.AssemblyInfo.cs
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.sourcelink.json
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.dll
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\refint\Calculator.dll
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.pdb
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\Calculator.genruntimeconfig.cache
+C:\Project\DotNetCalculator\Calculator\obj\Release\net8.0\ref\Calculator.dll

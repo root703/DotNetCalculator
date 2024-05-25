@@ -1,0 +1,5 @@
+C:\Project\DotNetCalculator\Calculator\publish\Calculator.exe
+C:\Project\DotNetCalculator\Calculator\publish\Calculator.dll
+C:\Project\DotNetCalculator\Calculator\publish\Calculator.deps.json
+C:\Project\DotNetCalculator\Calculator\publish\Calculator.runtimeconfig.json
+C:\Project\DotNetCalculator\Calculator\publish\Calculator.pdb
