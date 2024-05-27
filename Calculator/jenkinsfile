@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+    
+    environment {
+        SONARQUBE_SCANNER_HOME = tool 'SonarQubeScanner' 
+// Ensure this matches the SonarQube Scanner tool configuration in Jenkins
+        SONARQUBE_SERVER = 'SonarQubeServer' 
+// This should match the name of your SonarQube server configuration in Jenkins
+    }
+    
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    // Ensure the branch name is correct. Default is 'main'.
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                              userRemoteConfigs: [[url: 'https://github.com/root703/DotNetCalculator.git']]])
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    dir('Calculator') {
+                        bat 'dotnet build'
+                    }
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    withSonarQubeEnv('SonarQubeServer') {
+                        bat "${SONARQUBE_SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=DotNetCalculator -Dsonar.sources=Calculator -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_b27bdff21c96fa24679aec212ad68af0256ce635"
+                    }
+                }
+            }
+        }
+        stage('Upload Artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/bin/**/*.dll', fingerprint: true
+            }
+        }
+        stage('Cleanup') {
+            steps {
+                deleteDir()
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up...'
+            deleteDir()
+        }
+    }
+}
